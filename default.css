@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+  font-size: 21px;
+  font-family: "Press Start";
+  text-transform: uppercase;
+  line-height: 117%;
+}
+
+/* General Positioning */
+
+#header {
+  position: absolute;
+  height: 49px;
+  width: 100%;
+  
+  /* این سه خط باعث نامرئی شدن و رفتن به زیرترین لایه می‌شوند */
+  opacity: 0;
+  z-index: -999;
+  pointer-events: none; 
+
+}
+iframe {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  border: 0;
+  z-index: -96;
+  /* padding-top و box-sizing کلاً از اینجا حذف شدند */
+}
+
+
+#after {
+  position: absolute;
+  margin-top: 70px;
+  width: 100%;
+}
+
+/* #after bar */
+
+.bar1 {
+  margin: 7px;
+  width: 280px;
+  text-align: center;
+}
+
+#out_editor { float: left; }
+
+#out_mapselect { float: right; }
+
+#out_options { margin: 7px auto; }
+
+#out_keymapping { margin: 7px auto; }
+
+#in_options { position:absolute; z-index:-1;}
+
+#in_keymapping:hover { height: 400px;}
+
+#in_keymapping input {
+  width: 80px; 
+  margin-right: 20px;
+  float: right; 
+  font-family: "Press Start";
+  text-transform: uppercase;
+}
+
+#in_keymapping input:focus { background-color:#0099ff; }
+
+.expander {
+  margin-top: -24px;
+  padding: 7px;
+  width: 256px;
+  height: 24px;
+  display: none;
+  z-index: 98;
+  background: #009966;
+  border: 3px solid #99ffcc;
+  border-radius: 7px;
+  box-shadow: 0 3px 7px black inset;
+  font-size: 14px;
+}
+.bar1:hover .expander {
+  margin-top: 10px;
+  height: 280px;
+  display: block;
+}
+
+.bar1 div.label {
+  margin: 0 14px;
+  font-size: 14px;
+}
+
+/* Individual map buttons */
+
+.maprectout {
+  margin: 1px 3px;
+  display: inline-block;
+  background: #ffcc33;
+  border: 3px outset;
+  cursor: pointer;
+  color: black;
+  font-size: 14px;
+}
+
+.maprect {
+  width: 49px;
+  height: 20px;
+}
+
+.maprect.off {
+  background: #996600;
+}
+
+.maprect.big { width: 231px; }
+.maprect.larger { margin: 14px 0; }
+.maprect.giant { 
+  padding: 28px 0 70px 0;
+  font-size: 17px;
+  line-height: 210%;
+}
+
+
+
+
+/* --- استایل‌های صفحه پیغام موبایل --- */
+#mobile-warning {
+  display: none; /* در حالت عادی روی کامپیوتر کاملاً مخفی است */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#5c95fc;
+  color: white;
+  z-index: 9999;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#mobile-warning h1 {
+  color: #e52521; /* قرمز ماریو */
+  font-size: 28px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+#mobile-warning p {
+  color: #f4f2f2;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  max-width: 80%;
+}
+
+.mobile-dl-btn {
+  background: #009966; /* سبز مشابه دکمه‌های بازی */
+  border: 3px solid #99ffcc;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.mobile-dl-btn:active {
+  background: #007744;
+}
+
+/* --- دستورات شرطی برای گوشی و تبلت (صفحات کوچکتر از 1024 پیکسل) --- */
+@media screen and (max-width: 1024px) {
+  /* روشن کردن صفحه پیغام موبایل */
+  #mobile-warning {
+    display: flex; 
+  }
+  
+  /* خاموش و مخفی کردن موتور بازی و دکمه‌های مخصوص کامپیوتر */
+  #game, #header, #after {
+    display: none !important; 
+  }
+}

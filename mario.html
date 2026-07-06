@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Full Screen Mario</title>
+
+    <link href="mario.css" rel="stylesheet">
+    <link href="Fonts/stylesheet.css" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: transparent !important;
+        margin: 0;
+        overflow: hidden;
+      }
+      canvas {
+        position: absolute !important;
+        bottom: 0 !important;
+        padding-top: 720px !important;
+      }
+    </style>
+
+    <script>
+      Object.defineProperty(window, 'innerHeight', {
+        get: function() { return 545; }
+      });
+    </script>
+
+    <!-- لود کردن فایل‌های اصلی بازی -->
+    <script src="data.js"></script>
+    <script src="editor.js"></script>
+    <script src="gamepad.js"></script>
+    <script src="generator.js"></script>
+    <script src="library.js"></script>
+    <script src="load.js"></script>
+    <script src="maps.js"></script>
+    <script src="mario.js"></script>
+    <script src="sprites.js"></script>
+    <script src="things.js"></script>
+    <script src="toned.js"></script>
+    <script src="triggers.js"></script>
+    <script src="upkeep.js"></script>
+    <script src="utility.js"></script>
+    <script src="src/AudioPlayr/AudioPlayr.js"></script>
+    <script src="src/TimeHandlr/TimeHandlr.js"></script>
+    <script src="src/QuadsKeepr/QuadsKeepr.js"></script>
+    <script src="resume-data.js"></script> <script src="data.js"></script>
+
+</head>
+<body onload="FullScreenMario()">
+
+   
+
+   
+</body>
+</html>
