@@ -5,7 +5,7 @@ const myResumeData = {
             logo: "resumeimage/up.png", // اگر عکس لوگو داشتی آدرسش رو اینجا بذار (مثلا "tapsi.png")، اگر خالی باشه یک کادر سفید میاد
             title: "Graphic Designer",
             company: "Up",
-            date: "Nov 2023 - Present · 2y & 6 mos",
+            date: "Aug 2021 - Jan 2022 · 6 mos",
             description: [
                         "Skills: Adobe Illustrator · Adobe Photoshop . Figma"
                          ]
